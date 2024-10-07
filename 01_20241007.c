@@ -43,5 +43,6 @@ float n1, n2, n3, media, max, min;
     printf("\nla media è: %.2f", media);
     
 
+return 0
 } 
 
