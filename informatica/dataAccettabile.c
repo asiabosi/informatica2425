@@ -17,36 +17,39 @@ int main() {
 
     //controllo
     //un anno è bisestie se è multiplo di 4 ma non di 100, oppure multiplo di 400
-        if(anno%100==0){
+    if(anno%100==0){
         if(anno%400==0){
-        printf("l'anno è bisestile: ");
+            printf("l'anno è bisestile: ");
             bisestile=1;
         }
     }
    else{
         if(anno%4==0){
-        printf("l'anno è bisestile: ");
-         bisestile=1;
-    }
+            printf("l'anno è bisestile: ");
+            bisestile=1;
+        }
    } 
    // controllo del mese e del giorno
-        if(mese>=1 && mese<=12){
+    if(mese>=1 && mese<=12){
         if(mese==2){
-        if(giorno>=1 && giorno>=28+bisestile){
-         printf("\nLa data è accettabile");
-        }
-       
+            if(giorno>=1 && giorno>=28+bisestile)
+                printf("\nLa data è accettabile");   
+            }
+        else{
+            if(mese==11|| mese==4 || mese==6 || mese==9){
+                if(giorno>=1 && giorno<=30)
+                    printf("La data è accettabile");
+                else
+                    printf("La data non è accettabile");
+            }
     }
     else{
-        if(mese==11|| mese==4||mese==6||mese==9){
             if(giorno>=1 && giorno<=30)
-            printf("La data è accettabile");
-        }
-    }
-    else{
-            if(giorno>=1 && giorno<=30)
-            printf("\nLa data è accettabile");
-    }
+                    printf("\nLa data è accettabile");
+            else
+                    printf("La data non è accettabile");
+    }           
     }
    }
+
 }
